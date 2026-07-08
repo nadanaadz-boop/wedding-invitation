@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nada & Ubaid | Wedding Invitation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Poppins,sans-serif;
+background:#faf7f2;
+color:#333;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(rgba(255,255,255,.75),rgba(255,255,255,.75)),url("https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop");
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-size:50px;
+font-family:Cinzel;
+color:#b08d57;
+}
+
+.hero h2{
+font-size:22px;
+margin-top:15px;
+}
+
+.hero p{
+margin-top:15px;
+}
+
+.btn{
+margin-top:30px;
+padding:14px 30px;
+background:#b08d57;
+color:white;
+border-radius:30px;
+text-decoration:none;
+}
+
+section{
+padding:70px 20px;
+max-width:900px;
+margin:auto;
+text-align:center;
+}
+
+h3{
+font-family:Cinzel;
+font-size:34px;
+margin-bottom:25px;
+color:#b08d57;
+}
+
+.card{
+background:white;
+padding:25px;
+margin:20px 0;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.countdown{
+display:flex;
+justify-content:center;
+gap:20px;
+font-size:24px;
+font-weight:bold;
+margin-top:20px;
+flex-wrap:wrap;
+}
+
+.gallery img{
+width:280px;
+border-radius:12px;
+margin:10px;
+}
+
+footer{
+padding:40px;
+text-align:center;
+background:#b08d57;
+color:white;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="hero">
+
+<h2>﷽</h2>
+
+<h1>NADA SHIRIN NASIR</h1>
+
+<h2>&</h2>
+
+<h1>UBAID ABOOBAKER</h1>
+
+<p>With the blessings of Allah,<br>
+we request the honour of your presence.</p>
+
+<a href="#events" class="btn">View Invitation</a>
+
+</div>
+
+<section>
+
+<h3>Countdown</h3>
+
+<div class="countdown">
+<div><span id="days"></span><br>Days</div>
+<div><span id="hours"></span><br>Hours</div>
+<div><span id="minutes"></span><br>Minutes</div>
+<div><span id="seconds"></span><br>Seconds</div>
+</div>
+
+</section>
+
+<section id="events">
+
+<h3>Wedding Events</h3>
+
+<div class="card">
+
+<h2>Nikah</h2>
+
+<p><b>Date:</b> Sunday, 26 July 2026</p>
+
+<p><b>Time:</b> 10:00 AM</p>
+
+<p><b>Guest Reception:</b> From 5:00 PM onwards</p>
+
+<p><b>Venue:</b><br>
+Ezhara Juma Masjid</p>
+
+</div>
+
+<div class="card">
+
+<h2>Reception</h2>
+
+<p><b>Date:</b> Monday, 27 July 2026</p>
+
+<p><b>Time:</b> Afternoon</p>
+
+<p><b>Venue:</b><br>
+Rasheeda's Kuttikkakam Vayanashala,<br>
+Thottada, Kannur</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h3>Gallery</h3>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=800&auto=format&fit=crop">
+
+<img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=800&auto=format&fit=crop">
+
+</div>
+
+</section>
+
+<section>
+
+<h3>Location</h3>
+
+<a class="btn" href="https://maps.google.com" target="_blank">Open Google Maps</a>
+
+</section>
+
+<footer>
+
+May Allah bless our marriage with love, mercy and happiness.
+
+</footer>
+
+<script>
+
+var countDownDate = new Date("Jul 26, 2026 10:00:00").getTime();
+
+setInterval(function(){
+
+var now = new Date().getTime();
+
+var distance = countDownDate-now;
+
+document.getElementById("days").innerHTML=Math.floor(distance/(1000*60*60*24));
+
+document.getElementById("hours").innerHTML=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+document.getElementById("minutes").innerHTML=Math.floor((distance%(1000*60*60))/(1000*60));
+
+document.getElementById("seconds").innerHTML=Math.floor((distance%(1000*60))/1000);
+
+},1000);
+
+</script>
+
+</body>
+</html>
