@@ -3,222 +3,563 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nada & Ubaid | Wedding Invitation</title>
+<title>Nada &amp; Ubaid — Nikkah Invitation</title>
+<meta name="description" content="You are invited to the Nikkah of Nada Shirin Nasir and Ubaid Aboobacker TC">
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+SC:wght@500;600&family=Mrs+Saint+Delafield&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+  :root{
+    --ivory:#FBF4E7;
+    --ivory-deep:#F3E7D4;
+    --maroon:#6E1423;
+    --maroon-deep:#4A0D18;
+    --gold:#B7893F;
+    --gold-light:#D9B579;
+    --gold-dim:#C9A15D;
+    --ink:#2C1B12;
+    --ink-soft:#6B564A;
+    --paper-shadow: rgba(74,13,24,0.12);
+    --font-display:'Cormorant Garamond', serif;
+    --font-caps:'Cormorant SC', serif;
+    --font-script:'Mrs Saint Delafield', cursive;
+    --font-arabic:'Amiri', serif;
+  }
 
-body{
-font-family:Poppins,sans-serif;
-background:#faf7f2;
-color:#333;
-}
+  *{margin:0;padding:0;box-sizing:border-box;}
 
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:linear-gradient(rgba(255,255,255,.75),rgba(255,255,255,.75)),url("https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop");
-background-size:cover;
-background-position:center;
-}
+  html{scroll-behavior:smooth;}
 
-.hero h1{
-font-size:50px;
-font-family:Cinzel;
-color:#b08d57;
-}
+  body{
+    background:var(--ivory);
+    color:var(--ink);
+    font-family:var(--font-display);
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
 
-.hero h2{
-font-size:22px;
-margin-top:15px;
-}
+  .grain{
+    position:fixed;inset:0;pointer-events:none;z-index:1;
+    opacity:0.035;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
 
-.hero p{
-margin-top:15px;
-}
+  section{
+    position:relative;
+    width:100%;
+    padding:7rem 6vw;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    z-index:2;
+  }
 
-.btn{
-margin-top:30px;
-padding:14px 30px;
-background:#b08d57;
-color:white;
-border-radius:30px;
-text-decoration:none;
-}
+  .frame{
+    position:absolute; inset:14px;
+    border:1px solid var(--gold);
+    pointer-events:none;
+    z-index:3;
+  }
+  .frame::before{
+    content:"";
+    position:absolute; inset:6px;
+    border:1px solid var(--gold);
+    opacity:0.5;
+  }
 
-section{
-padding:70px 20px;
-max-width:900px;
-margin:auto;
-text-align:center;
-}
+  .reveal{
+    opacity:0;
+    transform:translateY(28px);
+    transition:opacity 1.1s cubic-bezier(.19,1,.22,1), transform 1.1s cubic-bezier(.19,1,.22,1);
+  }
+  .reveal.visible{opacity:1; transform:translateY(0);}
+  .reveal.d1{transition-delay:.15s;}
+  .reveal.d2{transition-delay:.3s;}
+  .reveal.d3{transition-delay:.45s;}
 
-h3{
-font-family:Cinzel;
-font-size:34px;
-margin-bottom:25px;
-color:#b08d57;
-}
+  .divider{
+    display:flex; align-items:center; gap:14px;
+    color:var(--gold);
+    margin:1.6rem 0;
+  }
+  .divider .line{width:52px; height:1px; background:var(--gold); opacity:.7;}
+  .divider svg{width:16px;height:16px;}
 
-.card{
-background:white;
-padding:25px;
-margin:20px 0;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-}
+  .eyebrow{
+    font-family:var(--font-caps);
+    letter-spacing:.32em;
+    font-size:.78rem;
+    color:var(--maroon);
+    text-transform:uppercase;
+  }
 
-.countdown{
-display:flex;
-justify-content:center;
-gap:20px;
-font-size:24px;
-font-weight:bold;
-margin-top:20px;
-flex-wrap:wrap;
-}
+  .hero{
+    min-height:100svh;
+    background:
+      radial-gradient(ellipse at 50% -10%, #fffaf1 0%, var(--ivory) 55%),
+      var(--ivory);
+    justify-content:center;
+    padding-top:5rem;
+    padding-bottom:4rem;
+  }
 
-.gallery img{
-width:280px;
-border-radius:12px;
-margin:10px;
-}
+  .hero-arch{
+    position:absolute;
+    top:6%;
+    width:min(560px, 82vw);
+    height:auto;
+    z-index:0;
+    opacity:.9;
+  }
 
-footer{
-padding:40px;
-text-align:center;
-background:#b08d57;
-color:white;
-}
+  .hero-inner{position:relative; z-index:2; display:flex; flex-direction:column; align-items:center;}
+
+  .bismillah{
+    font-family:var(--font-arabic);
+    color:var(--maroon-deep);
+    font-size:clamp(2.4rem, 7vw, 4rem);
+    line-height:1.5;
+    font-weight:700;
+    direction:rtl;
+  }
+
+  .bismillah-path{
+    stroke-dasharray: 1400;
+    stroke-dashoffset: 1400;
+    animation: draw 2.6s ease forwards .3s;
+  }
+  @keyframes draw{ to{ stroke-dashoffset:0; } }
+
+  .bismillah-translit{
+    margin-top:1rem;
+    font-style:italic;
+    color:var(--ink-soft);
+    font-size:1rem;
+    letter-spacing:.02em;
+  }
+
+  .hero-invite-line{
+    margin-top:3.4rem;
+    font-family:var(--font-caps);
+    font-size:.92rem;
+    letter-spacing:.28em;
+    color:var(--gold-dim);
+    text-transform:uppercase;
+  }
+
+  .hero-names{
+    margin-top:.6rem;
+    font-family:var(--font-script);
+    font-size:clamp(2.6rem, 8vw, 4.4rem);
+    color:var(--maroon);
+    line-height:1.15;
+  }
+
+  .hero-amp{
+    display:block;
+    font-family:var(--font-script);
+    font-size:1.6rem;
+    color:var(--gold);
+    margin:.1rem 0;
+  }
+
+  .scroll-cue{
+    position:absolute;
+    bottom:2.6rem;
+    display:flex; flex-direction:column; align-items:center; gap:.5rem;
+    color:var(--gold-dim);
+    font-family:var(--font-caps);
+    font-size:.68rem;
+    letter-spacing:.3em;
+    text-transform:uppercase;
+    animation:bob 2.6s ease-in-out infinite;
+  }
+  @keyframes bob{ 0%,100%{transform:translateY(0);} 50%{transform:translateY(8px);} }
+
+  .vine{
+    position:absolute;
+    width:150px; height:150px;
+    opacity:.85;
+    z-index:1;
+  }
+  .vine path, .vine circle{
+    fill:none;
+    stroke:var(--gold);
+    stroke-width:1.4;
+    stroke-linecap:round;
+  }
+  .vine .leaf{ fill:var(--gold-light); stroke:none; opacity:.85; }
+  .vine.tl{ top:18px; left:18px; }
+  .vine.br{ bottom:18px; right:18px; transform:rotate(180deg); }
+  .vine-draw{
+    stroke-dasharray:400;
+    stroke-dashoffset:400;
+    transition:stroke-dashoffset 1.6s cubic-bezier(.19,1,.22,1);
+  }
+  .vine.visible .vine-draw{ stroke-dashoffset:0; }
+
+  .invitation{
+    background:var(--ivory-deep);
+  }
+  .invite-copy{
+    max-width:640px;
+    font-size:clamp(1.05rem, 2vw, 1.3rem);
+    line-height:1.85;
+    color:var(--ink);
+  }
+  .invite-copy .names{
+    display:block;
+    font-family:var(--font-caps);
+    font-weight:600;
+    letter-spacing:.04em;
+    color:var(--maroon);
+    margin:.3rem 0;
+    font-size:1.05em;
+  }
+
+  .couple{ background:var(--ivory); }
+
+  .couple-names{
+    font-family:var(--font-script);
+    font-size:clamp(2.6rem, 7.5vw, 4.2rem);
+    color:var(--maroon);
+    line-height:1.2;
+  }
+  .couple-amp{ font-size:1.4rem; color:var(--gold); display:block; margin:.15rem 0; font-family:var(--font-script);}
+
+  .photo-frame{
+    margin:2.6rem 0 1.6rem;
+    width:200px; height:200px;
+    border-radius:50%;
+    border:1.5px solid var(--gold);
+    padding:8px;
+    position:relative;
+  }
+  .photo-frame::after{
+    content:"";
+    position:absolute; inset:0;
+    border-radius:50%;
+    border:1px solid var(--gold);
+    opacity:.5;
+    margin:2px;
+  }
+  .photo-inner{
+    width:100%; height:100%;
+    border-radius:50%;
+    background:linear-gradient(155deg, var(--blush,#EAD3C4), var(--ivory-deep));
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--font-script);
+    font-size:2.2rem;
+    color:var(--maroon);
+    overflow:hidden;
+  }
+  .photo-inner img{ width:100%; height:100%; object-fit:cover; display:none; }
+
+  .couple-parents{
+    font-size:1.05rem;
+    color:var(--ink-soft);
+    line-height:1.8;
+    max-width:480px;
+  }
+  .couple-parents strong{ color:var(--ink); font-weight:600; }
+
+  .details{ background:var(--ivory-deep); gap:2.4rem; }
+
+  .cards{
+    display:flex;
+    gap:2.2rem;
+    flex-wrap:wrap;
+    justify-content:center;
+    max-width:900px;
+  }
+
+  .card{
+    background:var(--ivory);
+    border:1px solid var(--gold);
+    border-radius:2px;
+    padding:2.6rem 2.4rem;
+    width:320px;
+    position:relative;
+  }
+  .card::before{
+    content:"";
+    position:absolute; inset:6px;
+    border:1px solid var(--gold);
+    opacity:.35;
+    pointer-events:none;
+  }
+  .card svg{ width:38px; height:38px; margin-bottom:1rem; }
+  .card h3{
+    font-family:var(--font-caps);
+    letter-spacing:.16em;
+    color:var(--maroon);
+    font-size:1.3rem;
+    text-transform:uppercase;
+    margin-bottom:.9rem;
+  }
+  .card p{
+    font-size:1.12rem;
+    color:var(--ink);
+    line-height:1.65;
+  }
+  .card .sub{
+    font-style:italic;
+    color:var(--ink-soft);
+    font-size:.95rem;
+    margin-top:.9rem;
+  }
+
+  .guest-note{
+    max-width:480px;
+    font-style:italic;
+    color:var(--ink-soft);
+    font-size:1.05rem;
+    line-height:1.7;
+  }
+
+  .venues{ background:var(--ivory); }
+  .venue-grid{
+    display:flex; gap:3.5rem; flex-wrap:wrap; justify-content:center;
+    max-width:820px;
+  }
+  .venue{ width:280px; }
+  .venue svg{ width:40px; height:40px; margin-bottom:.9rem; }
+  .venue h4{
+    font-family:var(--font-caps);
+    letter-spacing:.2em;
+    font-size:.85rem;
+    color:var(--gold-dim);
+    text-transform:uppercase;
+    margin-bottom:.6rem;
+  }
+  .venue .name{
+    font-size:1.25rem;
+    color:var(--maroon);
+    font-weight:600;
+    margin-bottom:.3rem;
+  }
+  .venue .loc{
+    color:var(--ink-soft);
+    font-size:1rem;
+  }
+  .venue-divider{
+    width:1px; align-self:stretch;
+    background:var(--gold);
+    opacity:.4;
+  }
+
+  .closing{ background:var(--maroon); color:var(--ivory); min-height:70svh;}
+  .closing .frame, .closing .frame::before{ border-color:var(--gold-light); }
+  .closing-script{
+    font-family:var(--font-script);
+    font-size:clamp(2.2rem,6vw,3.2rem);
+    color:var(--ivory);
+  }
+  .closing-sub{
+    margin-top:1.1rem;
+    font-size:1.15rem;
+    color:var(--gold-light);
+    letter-spacing:.03em;
+  }
+  .closing-hosts{
+    margin-top:2rem;
+    font-family:var(--font-caps);
+    letter-spacing:.22em;
+    font-size:1rem;
+    text-transform:uppercase;
+    color:var(--ivory);
+  }
+  .closing-hosts span{ color:var(--gold-light); }
+
+  footer{
+    padding:2.4rem 6vw 3rem;
+    text-align:center;
+    font-size:.8rem;
+    letter-spacing:.15em;
+    color:var(--gold-dim);
+    background:var(--ivory);
+  }
+
+  @media (max-width:640px){
+    section{ padding:5rem 7vw; }
+    .cards{ gap:1.6rem; }
+    .card{ width:100%; padding:2.2rem 1.6rem; }
+    .venue-divider{ display:none; }
+    .venue-grid{ gap:2.4rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal, .bismillah-path, .vine-draw{ transition:none !important; animation:none !important; opacity:1 !important; transform:none !important; stroke-dashoffset:0 !important; }
+    .scroll-cue{ animation:none; }
+  }
 </style>
-
 </head>
-
 <body>
 
-<div class="hero">
+<div class="grain"></div>
 
-<h2>﷽</h2>
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="frame"></div>
 
-<h1>NADA SHIRIN NASIR</h1>
+  <svg class="hero-arch" viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M40 260 V120 C40 55 110 15 200 15 C290 15 360 55 360 120 V260" fill="none" stroke="#B7893F" stroke-width="1.2" opacity="0.55"/>
+    <path d="M60 260 V125 C60 68 122 33 200 33 C278 33 340 68 340 125 V260" fill="none" stroke="#B7893F" stroke-width="1" opacity="0.35"/>
+  </svg>
 
-<h2>&</h2>
+  <svg class="vine tl" viewBox="0 0 150 150" aria-hidden="true">
+    <path class="vine-draw" d="M10 10 C 40 20, 30 60, 60 70 C 90 80, 80 40, 110 45" />
+    <ellipse class="leaf" cx="35" cy="24" rx="9" ry="4.5" transform="rotate(35 35 24)"/>
+    <ellipse class="leaf" cx="60" cy="68" rx="9" ry="4.5" transform="rotate(-20 60 68)"/>
+    <ellipse class="leaf" cx="95" cy="46" rx="9" ry="4.5" transform="rotate(50 95 46)"/>
+    <circle cx="10" cy="10" r="2.4" fill="#B7893F" stroke="none"/>
+  </svg>
 
-<h1>UBAID ABOOBAKER</h1>
+  <div class="hero-inner">
+    <svg viewBox="0 0 600 90" width="min(90vw, 560px)" height="auto" aria-label="Bismillah ir Rahman ir Raheem">
+      <text x="300" y="60" text-anchor="middle" font-family="Amiri, serif" font-size="52" fill="none" stroke="#4A0D18" stroke-width="1.1" class="bismillah-path" style="direction:rtl">
+        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+      </text>
+    </svg>
+    <p class="bismillah-translit reveal d2">In the name of Allah, the Most Gracious, the Most Merciful</p>
 
-<p>With the blessings of Allah,<br>
-we request the honour of your presence.</p>
+    <p class="hero-invite-line reveal d3">You are lovingly invited to the Nikkah of</p>
+    <h1 class="hero-names reveal d3">Nada Shirin<span class="hero-amp">&amp;</span>Ubaid Aboobacker</h1>
+  </div>
 
-<a href="#events" class="btn">View Invitation</a>
-
-</div>
-
-<section>
-
-<h3>Countdown</h3>
-
-<div class="countdown">
-<div><span id="days"></span><br>Days</div>
-<div><span id="hours"></span><br>Hours</div>
-<div><span id="minutes"></span><br>Minutes</div>
-<div><span id="seconds"></span><br>Seconds</div>
-</div>
-
+  <div class="scroll-cue">
+    <span>Scroll to begin</span>
+    <svg width="14" height="20" viewBox="0 0 14 20"><path d="M7 1 V19 M1 13 L7 19 L13 13" fill="none" stroke="#B7893F" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
 </section>
 
-<section id="events">
+<!-- ============ INVITATION LINE ============ -->
+<section class="invitation">
+  <svg class="vine tl reveal" viewBox="0 0 150 150" aria-hidden="true">
+    <path class="vine-draw" d="M10 10 C 40 20, 30 60, 60 70 C 90 80, 80 40, 110 45" />
+    <ellipse class="leaf" cx="35" cy="24" rx="9" ry="4.5" transform="rotate(35 35 24)"/>
+    <ellipse class="leaf" cx="95" cy="46" rx="9" ry="4.5" transform="rotate(50 95 46)"/>
+  </svg>
+  <svg class="vine br reveal" viewBox="0 0 150 150" aria-hidden="true">
+    <path class="vine-draw" d="M10 10 C 40 20, 30 60, 60 70 C 90 80, 80 40, 110 45" />
+    <ellipse class="leaf" cx="35" cy="24" rx="9" ry="4.5" transform="rotate(35 35 24)"/>
+    <ellipse class="leaf" cx="95" cy="46" rx="9" ry="4.5" transform="rotate(50 95 46)"/>
+  </svg>
 
-<h3>Wedding Events</h3>
+  <p class="eyebrow reveal">With hearts full of gratitude</p>
+  <div class="divider reveal d1"><span class="line"></span><svg viewBox="0 0 16 16"><path d="M8 0 L10 6 L16 8 L10 10 L8 16 L6 10 L0 8 L6 6 Z" fill="#B7893F"/></svg><span class="line"></span></div>
 
-<div class="card">
-
-<h2>Nikah</h2>
-
-<p><b>Date:</b> Sunday, 26 July 2026</p>
-
-<p><b>Time:</b> 10:00 AM</p>
-
-<p><b>Guest Reception:</b> From 5:00 PM onwards</p>
-
-<p><b>Venue:</b><br>
-Ezhara Juma Masjid</p>
-
-</div>
-
-<div class="card">
-
-<h2>Reception</h2>
-
-<p><b>Date:</b> Monday, 27 July 2026</p>
-
-<p><b>Time:</b> Afternoon</p>
-
-<p><b>Venue:</b><br>
-Rasheeda's Kuttikkakam Vayanashala,<br>
-Thottada, Kannur</p>
-
-</div>
-
+  <p class="invite-copy reveal d2">
+    <span class="names">Mr Abdul Nasir Meethalekkandy &amp; Mrs Rasheeda Nasir</span>
+    request the honour of your presence at the Nikkah of their beloved daughter
+  </p>
 </section>
 
-<section>
+<!-- ============ COUPLE ============ -->
+<section class="couple">
+  <p class="eyebrow reveal">Together with their families</p>
 
-<h3>Gallery</h3>
+  <h2 class="couple-names reveal d1">Nada Shirin Nasir<span class="couple-amp">&amp;</span>Ubaid Aboobacker T C</h2>
 
-<div class="gallery">
+  <div class="photo-frame reveal d2">
+    <div class="photo-inner">
+      <!-- Replace the placeholder below with your own photo:
+           <img src="images/couple.jpg" alt="Nada and Ubaid">
+           then delete the "N &amp; U" text on the next line. -->
+      N &amp; U
+    </div>
+  </div>
 
-<img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=800&auto=format&fit=crop">
+  <div class="divider reveal d2"><span class="line"></span><svg viewBox="0 0 16 16"><path d="M8 0 L10 6 L16 8 L10 10 L8 16 L6 10 L0 8 L6 6 Z" fill="#B7893F"/></svg><span class="line"></span></div>
 
-<img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=800&auto=format&fit=crop">
-
-</div>
-
+  <p class="couple-parents reveal d3">
+    Son of <strong>Aboobacker K N</strong> &amp; <strong>Jubairiya T C</strong><br>
+    "Badar Mahal", Kannadipparamba
+  </p>
 </section>
 
-<section>
+<!-- ============ DETAILS ============ -->
+<section class="details">
+  <p class="eyebrow reveal">Save the date</p>
+  <h2 style="font-family:var(--font-script); font-size:clamp(2rem,5vw,2.8rem); color:var(--maroon); margin:.4rem 0 2.4rem;" class="reveal d1">Join us in celebration</h2>
 
-<h3>Location</h3>
+  <div class="cards">
+    <div class="card reveal d1">
+      <svg viewBox="0 0 40 40" fill="none" stroke="#6E1423" stroke-width="1.4"><rect x="6" y="9" width="28" height="24" rx="1.5"/><path d="M6 16 H34"/><path d="M13 5 V11 M27 5 V11"/><path d="M13 22 h3 M20 22 h3 M27 22 h3 M13 27 h3 M20 27 h3"/></svg>
+      <h3>Nikkah</h3>
+      <p>Sunday, 26 July 2026<br>10:00 AM &middot; Safar 11</p>
+      <p class="sub">Guests are cordially invited to arrive from 5:00 PM onwards</p>
+    </div>
 
-<a class="btn" href="https://maps.google.com" target="_blank">Open Google Maps</a>
+    <div class="card reveal d2">
+      <svg viewBox="0 0 40 40" fill="none" stroke="#6E1423" stroke-width="1.4"><circle cx="15" cy="24" r="8"/><circle cx="25" cy="24" r="8"/><path d="M20 9 L23 15 L17 15 Z"/></svg>
+      <h3>Reception</h3>
+      <p>Monday, 27 July 2026<br>1:00 PM onwards</p>
+      <p class="sub">Sharing love and happiness with you</p>
+    </div>
+  </div>
+</section>
 
+<!-- ============ VENUES ============ -->
+<section class="venues">
+  <p class="eyebrow reveal">Where to find us</p>
+  <div class="divider reveal d1"><span class="line"></span><svg viewBox="0 0 16 16"><path d="M8 0 L10 6 L16 8 L10 10 L8 16 L6 10 L0 8 L6 6 Z" fill="#B7893F"/></svg><span class="line"></span></div>
+
+  <div class="venue-grid">
+    <div class="venue reveal d1">
+      <svg viewBox="0 0 40 40" fill="none" stroke="#B7893F" stroke-width="1.3"><path d="M6 34 V20 L20 10 L34 20 V34 Z"/><path d="M20 10 V4 M17 6 h6"/><circle cx="20" cy="19" r="4"/><path d="M6 34 H34"/></svg>
+      <h4>Nikkah Venue</h4>
+      <p class="name">Ezhara Juma Masjid</p>
+      <p class="loc">Thottada, Kannur</p>
+    </div>
+
+    <div class="venue-divider"></div>
+
+    <div class="venue reveal d2">
+      <svg viewBox="0 0 40 40" fill="none" stroke="#B7893F" stroke-width="1.3"><path d="M20 4 C12 4 6 10 6 18 C6 28 20 36 20 36 C20 36 34 28 34 18 C34 10 28 4 20 4 Z"/><circle cx="20" cy="18" r="4.5"/></svg>
+      <h4>Reception Venue</h4>
+      <p class="name">Rasheeda's Kuttikakam Vayanashala</p>
+      <p class="loc">Thottada, Kannur</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING ============ -->
+<section class="closing">
+  <div class="frame"></div>
+  <p class="eyebrow reveal" style="color:var(--gold-light);">In Sha Allah</p>
+  <h2 class="closing-script reveal d1">Sharing love &amp; happiness</h2>
+  <p class="closing-sub reveal d2">We would be honoured to have you with us on this blessed occasion</p>
+  <p class="closing-hosts reveal d3">Hosted with joy by <span>Shibil &amp; Rishan</span></p>
 </section>
 
 <footer>
-
-May Allah bless our marriage with love, mercy and happiness.
-
+  NADA &amp; UBAID &middot; 26&ndash;27 JULY 2026
 </footer>
 
 <script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.18 });
+  revealEls.forEach(el=>io.observe(el));
 
-var countDownDate = new Date("Jul 26, 2026 10:00:00").getTime();
-
-setInterval(function(){
-
-var now = new Date().getTime();
-
-var distance = countDownDate-now;
-
-document.getElementById("days").innerHTML=Math.floor(distance/(1000*60*60*24));
-
-document.getElementById("hours").innerHTML=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-
-document.getElementById("minutes").innerHTML=Math.floor((distance%(1000*60*60))/(1000*60));
-
-document.getElementById("seconds").innerHTML=Math.floor((distance%(1000*60))/1000);
-
-},1000);
-
+  document.querySelectorAll('.vine').forEach(v=>{
+    const io2 = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('visible'); }
+      });
+    }, { threshold: 0.1 });
+    io2.observe(v);
+  });
 </script>
 
 </body>
